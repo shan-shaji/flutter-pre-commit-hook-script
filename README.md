@@ -16,30 +16,31 @@ The primary purpose of this script is to provide an easy-to-use tool for Flutter
 - Runs static analysis using `flutter analyze`
 - Reports files that need formatting or have analysis issues
 
-## Installation
+## Easy Installation
 
-1. Copy the script file to your Flutter project's root directory.
-2. Rename the script to `flutter_lint_check.sh` (or any name you prefer).
+
+```bash
+
+curl -fsSl https://raw.githubusercontent.com/shan-shaji/flutter-pre-commit-hook-script/refs/heads/main/setup.sh| /bin/bash
+
+```
+
+
+## Manual Installation
+
+1. Create a new folder `.githooks` in your root directory
+2. Copy the script file to `.githooks` folder. Name the file as `pre-commit`.
 3. Make the script executable:
 
    ```
-   chmod +x flutter_lint_check.sh
+   chmod +x `.githooks/pre-commit`
    ```
 
-4. Set up the Git hook:
-   - Navigate to your project's `.git/hooks/` directory
-   - Create a new file named `pre-commit` (without any extension)
-   - Add the following content to the `pre-commit` file:
-
+4. Configure Git to use the .githooks folder for Git hooks:
      ```bash
-     #!/bin/sh
-     ./flutter_lint_check.sh
-     ```
 
-   - Make the `pre-commit` hook executable:
-
-     ```
-     chmod +x .git/hooks/pre-commit
+     git config core.hooksPath .githooks
+     
      ```
 
 ## Usage
@@ -56,7 +57,7 @@ To run the script manually:
 
 You can customize the script by modifying the following variables:
 
-- `BRANCH_DEST`: The branch to compare changes against (default is "master")
+- `BRANCH_DEST`: The branch to compare changes against (default is "main")
 - `FOLDERS_TO_CHECK`: An array of folders to check for Dart files (default is "lib" and "test")
 
 ## Future Plans
@@ -67,6 +68,3 @@ There are plans to add more checks and features to this script in the future. St
 
 Contributions to improve the script or add new features are welcome. Please feel free to submit pull requests or open issues on the GitHub repository.
 
-## License
-
-[Specify your chosen license here]

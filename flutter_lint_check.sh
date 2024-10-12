@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Initialize variables
-BRANCH_DEST=master
+BRANCH_DEST=main
 FOLDERS_TO_CHECK=("lib" "test")
 
 # Check if dart is available
