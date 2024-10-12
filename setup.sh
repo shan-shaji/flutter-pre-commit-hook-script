@@ -10,7 +10,7 @@ echo "Downloading pre-commit hook from GitHub..."
 curl -O "$REPO_URL/raw/main/$PRE_COMMIT_FILE"
 
 if [ ! -f "$PRE_COMMIT_FILE" ]; then
-    echo "Error: Failed to download pre-commit.sh from GitHub."
+    echo "Error: Failed to download $PRE_COMMIT_FILE from GitHub."
     exit 1
 fi
 
