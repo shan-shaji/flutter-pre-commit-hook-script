@@ -21,7 +21,7 @@ The primary purpose of this script is to provide an easy-to-use tool for Flutter
 
 ```bash
 
-curl -fsSl https://raw.githubusercontent.com/shan-shaji/flutter-pre-commit-hook-script/refs/heads/main/setup.sh| /bin/bash
+curl -fsSl https://raw.githubusercontent.com/shan-shaji/flutter-pre-commit-hook-script/refs/heads/main/setup.sh | /bin/bash
 
 ```
 

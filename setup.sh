@@ -21,7 +21,7 @@ else
     echo ".githooks directory already exists."
 fi
 
-echo "Moving pre-commit.sh to .githooks and renaming to pre-commit..."
+echo "Moving flutter_lint_check.sh to .githooks and renaming to pre-commit..."
 mv "$PRE_COMMIT_FILE" "$TARGET_HOOK"
 
 echo "Making the pre-commit hook executable..."
