@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 # Variables
-REPO_URL="https://github.com/shan-shaji/flutter-pre-commit-hook-script"
+REPO_URL="https://raw.githubusercontent.com/shan-shaji/flutter-pre-commit-hook-script"
 GITHOOKS_DIR=".githooks"
 PRE_COMMIT_FILE="flutter_lint_check.sh"
 TARGET_HOOK="$GITHOOKS_DIR/pre-commit"
 
 echo "Downloading pre-commit hook from GitHub..."
-curl -O "$REPO_URL/raw/main/$PRE_COMMIT_FILE"
+curl -O "$REPO_URL/refs/heads/main/$PRE_COMMIT_FILE"
 
 if [ ! -f "$PRE_COMMIT_FILE" ]; then
     echo "Error: Failed to download $PRE_COMMIT_FILE from GitHub."
