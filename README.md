@@ -1,4 +1,4 @@
-# Flutter Lint Check
+# Flutter Pre-commit hook Script
 
 ## Description
 
